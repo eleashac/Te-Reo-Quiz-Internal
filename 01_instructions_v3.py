@@ -30,9 +30,21 @@ def yes_no(question_text):
             return answer
 
 
+# integer check function
+def integer_checker(question):
+    error = "\nSorry, you must enter an integer\n"
+    age = ""
+    while not age:
+        try:
+            age = int(input(question))
+            return user_age
+        except ValueError:
+            print(error)
+
+
 # get user details
 user_name = input("What is your name? ").title()
-user_age = int(input("How old are you? "))
+user_age = integer_checker(int(input("How old are you? ")))
 
 
 # greet user and if under 9 years old warn it may be challenging
