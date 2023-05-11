@@ -1,7 +1,7 @@
 """
 Te Reo Quiz - User details and instructions
-prevent program from crashing if anything apart from an integer is entered when
-asking for user age
+prevents program from crashing if anything apart from an integer is entered when
+asking for user age by incorporating integer checker
 Created by Eleasha Chan
 """
 
