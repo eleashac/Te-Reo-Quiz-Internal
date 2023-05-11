@@ -29,6 +29,13 @@ def yes_no(question_text):
             return answer
 
 
+# display instructions function
+def instructions():
+    print("\n***** Te Reo Quiz *****\n")
+    print("The rules of the game will go here\n")
+    print("Program Continues\n")
+
+
 # get user details
 user_name = input("What is your name? ").title()
 user_age = int(input("How old are you? "))
@@ -41,13 +48,6 @@ if user_age < 9:
 
 else:
     print(f"\nHi {user_name}!")
-
-
-# display instructions function
-def instructions():
-    print("\n***** Te Reo Quiz *****\n")
-    print("The rules of the game will go here\n")
-    print("Program Continues\n")
 
 
 # main routine

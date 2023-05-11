@@ -7,6 +7,3 @@ def integer_checker(question):
             return age
         except ValueError:
             print(error)
-
-
-print(integer_checker("What is your age?"))

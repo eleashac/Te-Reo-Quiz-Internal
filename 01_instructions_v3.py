@@ -32,19 +32,26 @@ def yes_no(question_text):
 
 # integer check function
 def integer_checker(question):
-    error = "\nSorry, you must enter an integer\n"
+    error = "\nSorry, you must enter an integer"
     age = ""
     while not age:
         try:
             age = int(input(question))
-            return user_age
+            return age
         except ValueError:
             print(error)
 
 
+# display instructions function
+def instructions():
+    print("\n***** Te Reo Quiz *****\n")
+    print("The rules of the game will go here\n")
+    print("Program Continues\n")
+
+
 # get user details
 user_name = input("What is your name? ").title()
-user_age = integer_checker(int(input("How old are you? ")))
+user_age = integer_checker("How old are you? ")
 
 
 # greet user and if under 9 years old warn it may be challenging
@@ -54,13 +61,6 @@ if user_age < 9:
 
 else:
     print(f"\nHi {user_name}!")
-
-
-# display instructions function
-def instructions():
-    print("\n***** Te Reo Quiz *****\n")
-    print("The rules of the game will go here\n")
-    print("Program Continues\n")
 
 
 # main routine
