@@ -1,6 +1,6 @@
 """
 Te Reo Quiz - User details and instructions
-get user's name and age
+get user's name and age to address them
 Created by Eleasha Chan
 """
 
