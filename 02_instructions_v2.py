@@ -45,7 +45,6 @@ user_age = int(input("How old are you? "))
 if user_age < 9:
     print(f"\nHi {user_name}! At {user_age} years old, these questions may be "
           f"challenging.")
-
 else:
     print(f"\nHi {user_name}!")
 
