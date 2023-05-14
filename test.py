@@ -1,6 +1,7 @@
 import random
 
-# Define a list of tuples, where each tuple contains a question, three possible answers, and the index of the correct answer
+# Define a list of tuples, where each tuple contains a question, three possible
+# answers, and the index of the correct answer
 questions = [
     ("What is the Māori word for hello?",
      ["1. Kia ora", "2. Haere rā", "3. Aroha"], 0),
