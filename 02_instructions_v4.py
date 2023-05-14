@@ -1,6 +1,6 @@
 """
 Te Reo Quiz - User details and instructions
-adds full instructions
+greeting changed to 'kia ora' and add full instructions
 Created by Eleasha Chan
 """
 
@@ -9,7 +9,7 @@ Created by Eleasha Chan
 def yes_no(question_text):
     while True:
 
-        # Ask user if they know how to play
+        # Ask user if they want to read the instructions
         answer = input(question_text).lower()
 
         while answer != "yes" and answer != "no" and \
@@ -23,7 +23,7 @@ def yes_no(question_text):
             answer = "Yes"
             return answer
 
-        # If they say yes, output 'Program Continues'
+        # If they say no, output 'Program Continues'
         else:
             answer = "No"
             return answer
@@ -43,9 +43,14 @@ def integer_checker(question):
 
 # display instructions function
 def instructions():
-    print("\n***** Te Reo Quiz *****\n")
-    print("The rules of the game will go here\n")
-    print("Program Continues\n")
+    print("\n***** Te Reo Quiz ***** \n")
+    print("1. Press <enter> to begin. \n"
+          "2. Type in the correct translation out of the options provided: "
+          "capitalisation and macrons don't matter, but spelling does. \n"
+          "3. Press <enter> to submit your answer and get the "
+          "results of the round, and again to move onto the next question. \n"
+          "\tAfter 10 rounds your final score will be displayed and you will "
+          "get the option to play again. Kia Ora!")
 
 
 # get user details
@@ -55,10 +60,10 @@ user_age = integer_checker("How old are you? ")
 
 # greet user and if under 9 years old warn it may be challenging
 if user_age < 9:
-    print(f"\nHi {user_name}! At {user_age} years old, these questions may be "
-          f"challenging.")
+    print(f"\nKia ora {user_name}! At {user_age} years old, these questions "
+          f"may be challenging. Good luck!")
 else:
-    print(f"\nHi {user_name}!")
+    print(f"\nKia ora {user_name}!")
 
 
 # main routine

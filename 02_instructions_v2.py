@@ -9,7 +9,7 @@ Created by Eleasha Chan
 def yes_no(question_text):
     while True:
 
-        # Ask user if they know how to play
+        # Ask user if they want to read the instructions
         answer = input(question_text).lower()
 
         while answer != "yes" and answer != "no" and \
@@ -44,7 +44,7 @@ user_age = int(input("How old are you? "))
 # greet user and if under 9 years old warn it may be challenging
 if user_age < 9:
     print(f"\nHi {user_name}! At {user_age} years old, these questions may be "
-          f"challenging.")
+          f"challenging. Good luck!")
 else:
     print(f"\nHi {user_name}!")
 
