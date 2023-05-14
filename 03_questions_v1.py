@@ -1,6 +1,13 @@
+"""
+Te Reo Quiz - Questions
+set up 10 Te Reo Maori quiz questions
+Created by Eleasha Chan
+"""
+
 import random
 
-# Define a list of tuples, where each tuple contains a question, three possible answers, and the index of the correct answer
+# Define a list of tuples, where each tuple contains a question, three possible
+# answers, and the index of the correct answer
 questions = [
     ("What is the Māori word for hello?",
      ["1. Kia ora", "2. Haere rā", "3. Aroha"], 0),
@@ -15,11 +22,6 @@ questions = [
     ("What is the Māori word for love?",
      ["1. Aroha", "2. Kia ora", "3. Haere rā"], 0),
 ]
-
-# Print instructions for the user
-print("Kia ora! Welcome to the te reo Māori quiz.\n")
-print(
-    "Choose the correct answer by inputting the corresponding integer (1, 2, or 3) for each question.\n")
 
 # Shuffle the order of the questions
 random.shuffle(questions)
@@ -51,5 +53,3 @@ for q, a, c in questions:
         print("Incorrect. The correct answer is:", a[c])
     print()  # Add a blank line for readability
 
-# Print the final score
-print("You got", score, "out of", len(questions), "questions correct.")
