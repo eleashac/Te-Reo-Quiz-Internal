@@ -11,6 +11,6 @@ user_age = int(input("How old are you? "))
 # main routine
 if user_age < 9:
     print(f"\nHi {user_name}! At {user_age} years old, the questions may be "
-          f"challenging.")
+          f"challenging. Good luck!")
 else:
     print(f"\nHi {user_name}!")
