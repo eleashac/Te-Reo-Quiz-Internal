@@ -1,3 +1,9 @@
+"""
+Te Reo Quiz - Integer Checker
+"""
+
+
+# integer check function
 def integer_checker(question):
     error = "\nSorry, you must enter an integer\n"
     age = ""
