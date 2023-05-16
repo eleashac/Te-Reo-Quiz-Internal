@@ -1,5 +1,6 @@
 """
-Te Reo Quiz - ABC Checker
+Te Reo Quiz - ABC Check
+makes sure answer input is valid
 """
 
 

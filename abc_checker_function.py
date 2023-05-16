@@ -1,5 +1,6 @@
 """
-Te Reo Quiz - ABC Checker
+Te Reo Quiz - ABC Check
+converts abc_checker_v1 into a function
 """
 
 
