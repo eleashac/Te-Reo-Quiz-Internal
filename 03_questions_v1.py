@@ -36,6 +36,7 @@ else:
     print("Incorrect. The answer is b) Aotearoa, which translates to the "
           "'Land of the Long White Cloud' in English.")
 
+
 # Question 3
 print("\nQuestion 2: What is 'mana' in Māori culture?\n"
       "\ta) Power and prestige\n"
