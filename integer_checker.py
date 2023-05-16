@@ -13,3 +13,7 @@ def integer_checker(question):
             return age
         except ValueError:
             print(error)
+
+
+# main routine
+user_age = integer_checker("How old are you? ")
