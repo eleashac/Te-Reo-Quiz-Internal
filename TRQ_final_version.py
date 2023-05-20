@@ -1,6 +1,5 @@
 """
-Te Reo Quiz - Base
-adds welcome message and statement formatter
+Te Reo Quiz - Final Version
 Created by Eleasha Chan
 """
 
