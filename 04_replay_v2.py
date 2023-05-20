@@ -1,56 +1,7 @@
 """
-Te Reo Quiz - Base
-incorporates 04_replay_v2
-Created by Eleasha Chan
+Te Reo Quiz - Replay
+adds goodbye message when user doesn't play again
 """
-
-
-# yes/no check function
-def yes_no(question_text):
-    while True:
-
-        # Ask user if they want to read the instructions
-        answer = input(question_text).lower()
-
-        while answer != "yes" and answer != "no" and \
-                answer != "y" and answer != "n":
-            print("Please enter yes or no ")
-
-            answer = input(question_text).lower()
-
-        # If they say yes, output 'Display instructions'
-        if answer == "yes" or answer == "y":
-            answer = "Yes"
-            return answer
-
-        # If they say no, output 'Program Continues'
-        else:
-            answer = "No"
-            return answer
-
-
-# integer check function
-def integer_checker(question_):
-    error = "\nSorry, you must enter an integer"
-    age = ""
-    while not age:
-        try:
-            age = int(input(question_))
-            return age
-        except ValueError:
-            print(error)
-
-
-# display instructions function
-def instructions():
-    print("\n***** Te Reo Quiz ***** \n")
-    print("1. Press <enter> to begin. \n"
-          "2. Type in the correct translation out of the options provided: "
-          "either a, b, or c. \n"
-          "3. Press <enter> to submit your answer and get the "
-          "results of the round, and again to move onto the next question. \n"
-          "\tAfter 10 rounds your final score will be displayed and you will "
-          "get the option to play again. Kia Ora!")
 
 
 # abc checker function
@@ -60,32 +11,6 @@ def a_b_c():
         if _answer in ["a", "b", "c"]:
             return _answer
         print("Please enter a, b, or c")
-
-
-# get user details
-user_name = input("What is your name? ").title()
-user_age = integer_checker("How old are you? ")
-
-
-# greet user and if under 9 years old warn it may be challenging
-if user_age < 9:
-    print(f"\nTēnā koe {user_name}! At {user_age} years old, these questions "
-          f"may be challenging. Good luck!")
-else:
-    print(f"\nKia ora {user_name}!")
-
-
-# ask user if they want to read the instructions
-want_instructions = yes_no("Would you like to read the instructions? ")
-
-# if user inputs 'yes', show instructions
-if want_instructions == "Yes":
-    instructions()
-    print()
-
-# get user to press enter to play to prevent questions from displaying
-# together with the instructions
-print(input("Please press enter to start:"))
 
 
 # Define the list of questions and answers

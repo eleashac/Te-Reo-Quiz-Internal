@@ -23,7 +23,7 @@ def yes_no(question_text):
             answer = "Yes"
             return answer
 
-        # If they say yes, output 'Program Continues'
+        # If they say no, output 'Program Continues'
         else:
             answer = "No"
             return answer

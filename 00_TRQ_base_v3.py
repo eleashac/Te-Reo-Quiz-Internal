@@ -1,6 +1,6 @@
 """
 Te Reo Quiz - Base
-incorporates 04_replay_v2
+adds welcome message and statement formatter
 Created by Eleasha Chan
 """
 
@@ -60,6 +60,14 @@ def a_b_c():
         if _answer in ["a", "b", "c"]:
             return _answer
         print("Please enter a, b, or c")
+
+
+# function to format text output
+def formatter(symbol, text):
+    sides = symbol * 3
+    formatted_text = f"{sides} {text} {sides}"
+    top_bottom = symbol * len(formatted_text)
+    return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
 
 
 # get user details

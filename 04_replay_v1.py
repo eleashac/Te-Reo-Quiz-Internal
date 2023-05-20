@@ -1,6 +1,7 @@
 """
-Te Reo Quiz - Questions v2
-incorporates abc_checker to prevent user from inputting invalid answer
+Te Reo Quiz - Replay
+converts 03_questions_v3 into a function to add replay option if user wants
+to play again
 """
 
 
@@ -11,10 +12,6 @@ def a_b_c():
         if _answer in ["a", "b", "c"]:
             return _answer
         print("Please enter a, b, or c")
-
-
-# Initialize score
-score = 0
 
 
 # Define the list of questions and answers
@@ -94,28 +91,42 @@ questions = [
 ]
 
 
-# Iterate over each question in the list
-for question_number in range(len(questions)):
-    question = questions[question_number]
+# Function to play the quiz
+def play_quiz():
 
-    # Adds one each time to get question numbers that increase each round
-    print(f"\nQuestion {question_number + 1}: {question['question']}")
+    # Initialize score
+    score = 0
 
-    # prints options (a, b, c) for question
-    for option in question['options']:
-        print(option)
+    # Iterate over each question in the list
+    for question_number in range(len(questions)):
+        question = questions[question_number]
 
-    # main routine for abc checker to ensure user inputs valid answer
-    user_answer = a_b_c()
+        # Adds one each time to get question numbers that increase each round
+        print(f"\nQuestion {question_number + 1}: {question['question']}")
 
-    # tell user if they are correct or incorrect and provide short, informative
-    # explanation of quiz word
-    if user_answer == question['answer']:
-        print("Correct!", question['explanation'])
-        score += 1
-    else:
-        print("Incorrect.", question['explanation'])
+        # prints options (a, b, c) for question
+        for option in question['options']:
+            print(option)
+
+        # main routine for abc checker to ensure user inputs valid answer
+        user_answer = a_b_c()
+
+        # tell user if they are correct or incorrect and provide short,
+        # informative explanation of quiz word
+        if user_answer == question['answer']:
+            print("Correct!", question['explanation'])
+            score += 1
+        else:
+            print("Incorrect.", question['explanation'])
+
+    # Print the final score out of the total amount of questions
+    print(f"\nYour score: {score}/{len(questions)}")
+
+    # Ask if the user wants to play again
+    play_again = input("Do you want to play again? (yes/no): ").lower()
+    if play_again == "yes":
+        play_quiz()
 
 
-# Print the final score out of total amount of questions
-print(f"\nYour score: {score}/{len(questions)}")
+# Start the quiz
+play_quiz()
