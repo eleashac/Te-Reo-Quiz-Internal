@@ -1,6 +1,7 @@
 """
 Te Reo Quiz - Base
-components added after they have been created and tested
+adds 'play again' option by converting main routine into a while loop that
+repeats if user inputs they want to replay
 Created by Eleasha Chan
 """
 
