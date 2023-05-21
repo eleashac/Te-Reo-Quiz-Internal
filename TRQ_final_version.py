@@ -1,6 +1,5 @@
 """
-Te Reo Quiz - Base
-includes update from 03_questions_v4
+Te Reo Quiz - Final Version
 Created by Eleasha Chan
 """
 
@@ -86,7 +85,7 @@ if user_age < 11:
     print(f"\nTēnā koe {user_name}! At {user_age} years old, these questions "
           f"may be challenging. Good luck!")
 else:
-    print(f"\nKia ora {user_name}!")
+    print(f"\nTēnā koe {user_name}!")
 
 
 # ask user if they want to read the instructions

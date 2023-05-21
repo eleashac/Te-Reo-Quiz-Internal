@@ -60,10 +60,10 @@ user_age = integer_checker("How old are you? ")
 
 # greet user and if under 11 years old warn it may be challenging
 if user_age < 11:
-    print(f"\nKia ora {user_name}! At {user_age} years old, these questions "
+    print(f"\nTēnā koe {user_name}! At {user_age} years old, these questions "
           f"may be challenging. Good luck!")
 else:
-    print(f"\nKia ora {user_name}!")
+    print(f"\nTēnā koe {user_name}!")
 
 
 # main routine

@@ -1,6 +1,6 @@
 """
 Te Reo Quiz - User details and instructions
-greeting changed to 'kia ora' and add full instructions
+adds full instructions
 Created by Eleasha Chan
 """
 

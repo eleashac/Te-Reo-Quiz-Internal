@@ -1,6 +1,6 @@
 """
 Te Reo Quiz - Questions v4
-incorporates abc_checker to prevent user from inputting invalid answer
+adds message dependent on user overall score
 """
 
 
