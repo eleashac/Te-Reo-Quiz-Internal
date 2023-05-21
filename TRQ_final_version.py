@@ -71,6 +71,72 @@ def formatter(symbol, text):
     return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
 
 
+# Function to play the quiz
+def play_quiz():
+
+    # Initialize score
+    score = 0
+
+    # Iterate over each question in the list
+    for question_number in range(len(questions)):
+        question = questions[question_number]
+        print()
+
+        # Adds one each time to get question numbers that increase each round
+        print(formatter("-", f"Question {question_number + 1}: "
+                        f"{question['question']}"))
+
+        # prints options (a, b, c) for question
+        for option in question['options']:
+            print(option)
+
+        # main routine for abc checker to ensure user inputs valid answer
+        user_answer = a_b_c()
+
+        # tell user if they are correct or incorrect and provide short,
+        # informative explanation of quiz word
+        if user_answer == question['answer']:
+            print("Correct!", question['explanation'])
+            score += 1
+        else:
+            print("Incorrect.", question['explanation'])
+
+    # Print the final score out of the total amount of questions
+    print()
+    print(formatter("/", f"Your score: {score}/{len(questions)}"))
+    print()
+
+    # if score is 0-3, display "Kia kaha. You need to study more."
+    if score <= 3:
+        print(formatter("*", "Kia kaha. You need to study more."))
+
+    # if score is 4-6, display "Tōna pai nei. Not bad, but you can do better."
+    elif score <= 6:
+        print(formatter("*", "Tōna pai nei. Not bad, but you can do better."))
+
+    # if score is 7-9, display "Ka rawe! You have a good knowledge of
+    # Te Reo Māori."
+    elif score <= 9:
+        print(formatter("*", "Ka rawe! You have a good knowledge of "
+                             "Te Reo Māori."))
+
+    # if score is 10, display "Tino pai! You got a perfect score!"
+    else:
+        print(formatter("*", "Tino pai! You got a perfect score!"))
+
+    # Ask if the user wants to play again
+    play_again = input("\nWould you like to play again? (yes/no): ").lower()
+
+    # if 'yes', replay quiz questions
+    if play_again == "yes" or play_again == "y":
+        play_quiz()
+
+    # if anything else, display goodbye message
+    else:
+        print()
+        print(formatter("=", "Thank you for playing! Ka kite anō!"))
+
+
 # welcome user
 print(formatter("*", "Welcome to the Te Reo Māori Quiz"))
 
@@ -176,72 +242,6 @@ questions = [
                        "empathy."
     }
 ]
-
-
-# Function to play the quiz
-def play_quiz():
-
-    # Initialize score
-    score = 0
-
-    # Iterate over each question in the list
-    for question_number in range(len(questions)):
-        question = questions[question_number]
-        print()
-
-        # Adds one each time to get question numbers that increase each round
-        print(formatter("-", f"Question {question_number + 1}: "
-                        f"{question['question']}"))
-
-        # prints options (a, b, c) for question
-        for option in question['options']:
-            print(option)
-
-        # main routine for abc checker to ensure user inputs valid answer
-        user_answer = a_b_c()
-
-        # tell user if they are correct or incorrect and provide short,
-        # informative explanation of quiz word
-        if user_answer == question['answer']:
-            print("Correct!", question['explanation'])
-            score += 1
-        else:
-            print("Incorrect.", question['explanation'])
-
-    # Print the final score out of the total amount of questions
-    print()
-    print(formatter("/", f"Your score: {score}/{len(questions)}"))
-    print()
-
-    # if score is 0-3, display "Kia kaha. You need to study more."
-    if score <= 3:
-        print(formatter("*", "Kia kaha. You need to study more."))
-
-    # if score is 4-6, display "Tōna pai nei. Not bad, but you can do better."
-    elif score <= 6:
-        print(formatter("*", "Tōna pai nei. Not bad, but you can do better."))
-
-    # if score is 7-9, display "Ka rawe! You have a good knowledge of
-    # Te Reo Māori."
-    elif score <= 9:
-        print(formatter("*", "Ka rawe! You have a good knowledge of "
-                             "Te Reo Māori."))
-
-    # if score is 10, display "Tino pai! You got a perfect score!"
-    else:
-        print(formatter("*", "Tino pai! You got a perfect score!"))
-
-    # Ask if the user wants to play again
-    play_again = input("\nWould you like to play again? (yes/no): ").lower()
-
-    # if 'yes', replay quiz questions
-    if play_again == "yes" or play_again == "y":
-        play_quiz()
-
-    # if anything else, display goodbye message
-    else:
-        print()
-        print(formatter("=", "Thank you for playing! Ka kite anō!"))
 
 
 # Start the quiz
