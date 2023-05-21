@@ -80,8 +80,8 @@ user_name = input("\nWhat is your name? ").title()
 user_age = integer_checker("How old are you? ")
 
 
-# greet user and if under 9 years old warn it may be challenging
-if user_age < 9:
+# greet user and if under 11 years old warn it may be challenging
+if user_age < 11:
     print(f"\nTēnā koe {user_name}! At {user_age} years old, these questions "
           f"may be challenging. Good luck!")
 else:
