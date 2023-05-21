@@ -1,5 +1,5 @@
 """
-Te Reo Quiz - Questions v3
+Te Reo Quiz - Questions v4
 incorporates abc_checker to prevent user from inputting invalid answer
 """
 
@@ -119,3 +119,20 @@ for question_number in range(len(questions)):
 
 # Print the final score out of total amount of questions
 print(f"\nYour score: {score}/{len(questions)}")
+
+
+# if score is 0-3, display "Kia kaha. You need to study more."
+if score <= 3:
+    print("Kia kaha. You need to study more.")
+
+# if score is 4-6, display "Tōna pai nei. You can do better."
+elif score <= 6:
+    print("Tōna pai nei. You can do better.")
+
+# if score is 7-9, display "Ka rawe! You have a good knowledge of Te Reo Māori."
+elif score <= 9:
+    print("Ka rawe! You have a good knowledge of Te Reo Māori.")
+
+# if score is 10, display "Tino pai! You got a perfect score!"
+else:
+    print("Tino pai! You got a perfect score!")
