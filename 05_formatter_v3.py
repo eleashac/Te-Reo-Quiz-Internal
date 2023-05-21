@@ -13,8 +13,8 @@ def formatter(symbol, text):
 
 
 # main routine
-print(formatter("-", "Welcome to the Lucky Unicorn Game"))
+print(formatter("*", "Welcome to the Te Reo Māori Quiz"))
 print()
-print(formatter("*", "Congratulations, you won a Unicorn!"))
+print(formatter("*", "Tino pai! You got a perfect score!"))
 print()
-print(formatter("=", "Thanks for playing!"))
+print(formatter("=", "Thank you for playing! Ka kite anō!"))

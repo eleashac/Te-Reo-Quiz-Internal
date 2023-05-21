@@ -232,7 +232,7 @@ def play_quiz():
         print(formatter("*", "Tino pai! You got a perfect score!"))
 
     # Ask if the user wants to play again
-    play_again = input("\nWould you like to play again? (yes/no): ")
+    play_again = input("\nWould you like to play again? (yes/no): ").lower()
 
     # if 'yes', replay quiz questions
     if play_again == "yes" or play_again == "y":
